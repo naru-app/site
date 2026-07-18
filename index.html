@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Naru — 서로의 시간을 건너는 둘만의 나룻배</title>
+  <meta name="description" content="장거리 커플이 서로의 시간을 함께 보는 앱, Naru.">
+  <style>
+    :root{
+      --deep:#3f3159; --sunset:#ee8468; --ink:#262230; --muted:#77707e;
+      --mist:#faf5ec; --sky:#f29a8a; --dusk:#43355e; --line:rgba(0,0,0,.08);
+      --card:#ffffff;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --mist:#1c1826; --ink:#f3eee6; --muted:#a49caa;
+             --card:#262230; --line:rgba(255,255,255,.10); }
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+      color:var(--ink);background:var(--mist);-webkit-font-smoothing:antialiased;line-height:1.6}
+    .wrap{max-width:720px;margin:0 auto;padding:clamp(28px,6vw,72px) 22px}
+    .hero{background:linear-gradient(135deg,var(--sky),var(--dusk));color:#fff;border-radius:28px;
+      padding:clamp(28px,6vw,52px);box-shadow:0 18px 40px rgba(63,49,89,.20)}
+    .brand{font-size:clamp(34px,8vw,52px);font-weight:800;letter-spacing:-.02em;margin:0}
+    .tag{font-size:clamp(15px,3.6vw,19px);opacity:.94;margin:.5rem 0 0}
+    .lead{margin:26px 2px 0;color:var(--muted);font-size:16px}
+    .features{display:grid;gap:12px;margin:22px 0 0}
+    .feat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 18px}
+    .feat b{color:var(--ink)}
+    .feat span{color:var(--muted);display:block;margin-top:2px;font-size:14px}
+    footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
+      color:var(--muted);font-size:14px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+    footer a{color:var(--deep);text-decoration:none;font-weight:600}
+    @media (prefers-color-scheme: dark){footer a{color:var(--sunset)}}
+    footer a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <h1 class="brand">Naru</h1>
+      <p class="tag">서로의 시간을 건너는 둘만의 나룻배</p>
+    </header>
+
+    <p class="lead">장거리 커플이 서로의 현지 시간·일정·다음에 함께 하고 싶은 것을 한 화면에서 보는 앱이에요.</p>
+
+    <div class="features">
+      <div class="feat"><b>지금, 두 사람</b><span>내 시간과 상대의 현지 시간이 나란히 흐르고, 자는 시간엔 표시로 알려줘요.</span></div>
+      <div class="feat"><b>함께 여유 시간</b><span>둘 다 깨어 있고 일정이 없는 시간을 찾아줘요.</span></div>
+      <div class="feat"><b>다음 만남</b><span>"해볼까?"와 "해보자!"로 함께 하고 싶은 것을 모아둬요.</span></div>
+    </div>
+
+    <footer>
+      <a href="./privacy.html">개인정보 처리방침</a>
+      <span>문의 · <a href="mailto:edwinjungwoo@gmail.com">edwinjungwoo@gmail.com</a></span>
+    </footer>
+  </div>
+</body>
+</html>
