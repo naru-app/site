@@ -42,13 +42,23 @@
           Naru는 서로 다른 하루를 이해하고, 함께할 순간을 찾게 해줘요.
         </p>
         <div class="hero-actions">
-          <a class="app-store-button" href="#download" aria-label="App Store 출시 준비 중">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M16.7 12.9c0-2.6 2.1-3.9 2.2-4-1.2-1.8-3.1-2-3.8-2-1.6-.2-3.2 1-4 1-.9 0-2.3-1-3.7-1-1.9 0-3.6 1.1-4.6 2.8-2 3.4-.5 8.5 1.4 11.3 1 1.4 2.1 3 3.6 2.9 1.5-.1 2-.9 3.8-.9 1.8 0 2.3.9 3.9.9 1.6 0 2.6-1.4 3.5-2.8 1.1-1.6 1.5-3.1 1.5-3.2-.1 0-3.8-1.5-3.8-5zM14 5.2c.8-1 1.3-2.3 1.2-3.7-1.2.1-2.6.8-3.4 1.7-.7.8-1.4 2.2-1.2 3.5 1.3.1 2.6-.6 3.4-1.5z"/>
-            </svg>
-            <span><small>App Store</small>출시 준비 중</span>
+          <a class="release-notice-button" href="mailto:slee.iconlab@gmail.com?subject=Naru%20출시%20소식">출시 소식 받기</a>
+
+          <!--
+            App Store 출시 후:
+            1. 아래 a 요소에 실제 제품 페이지 주소를 href로 추가합니다.
+            2. hidden을 제거합니다.
+            3. 위 release-notice-button을 제거합니다.
+            Apple 지침에 따라 이 공식 배지는 페이지에서 한 번만 노출합니다.
+          -->
+          <a
+            class="app-store-badge-link"
+            aria-label="App Store에서 Naru 다운로드"
+            hidden
+          >
+            <img src="./assets/app-store-badge-ko.svg" alt="App Store에서 다운로드" width="162" height="50">
           </a>
-          <a class="quiet-link" href="mailto:slee.iconlab@gmail.com?subject=Naru%20출시%20소식">출시 소식 문의</a>
+          <a class="quiet-link" href="#features">Naru 살펴보기</a>
         </div>
         <p class="availability">iPhone용 · 광고 없음 · 자동 결제 없음</p>
       </div>
@@ -201,12 +211,7 @@
       <a class="wordmark wordmark-large" href="./index.html" aria-label="Naru 홈">naru<span></span></a>
       <h2>멀리 있어도,<br>서로의 하루는 이어져요.</h2>
       <p>Naru는 지금 App Store 출시를 준비하고 있습니다.</p>
-      <a class="app-store-button app-store-button-light" href="mailto:slee.iconlab@gmail.com?subject=Naru%20출시%20소식">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M16.7 12.9c0-2.6 2.1-3.9 2.2-4-1.2-1.8-3.1-2-3.8-2-1.6-.2-3.2 1-4 1-.9 0-2.3-1-3.7-1-1.9 0-3.6 1.1-4.6 2.8-2 3.4-.5 8.5 1.4 11.3 1 1.4 2.1 3 3.6 2.9 1.5-.1 2-.9 3.8-.9 1.8 0 2.3.9 3.9.9 1.6 0 2.6-1.4 3.5-2.8 1.1-1.6 1.5-3.1 1.5-3.2-.1 0-3.8-1.5-3.8-5zM14 5.2c.8-1 1.3-2.3 1.2-3.7-1.2.1-2.6.8-3.4 1.7-.7.8-1.4 2.2-1.2 3.5 1.3.1 2.6-.6 3.4-1.5z"/>
-        </svg>
-        <span><small>출시 소식</small>이메일로 문의하기</span>
-      </a>
+      <a class="release-notice-button release-notice-button-light" href="mailto:slee.iconlab@gmail.com?subject=Naru%20출시%20소식">출시 소식 받기</a>
     </section>
   </main>
 
@@ -220,7 +225,10 @@
       <a href="./terms.html">이용약관</a>
       <a href="mailto:slee.iconlab@gmail.com">문의</a>
     </div>
-    <p class="copyright">© 2026 Naru</p>
+    <div class="legal">
+      <p class="copyright">© 2026 Naru</p>
+      <p class="apple-credit">Apple 및 Apple 로고는 미국 및 기타 국가에서 등록된 Apple Inc.의 상표입니다. App Store는 Apple Inc.의 서비스 마크입니다.</p>
+    </div>
   </footer>
 </body>
 </html>
