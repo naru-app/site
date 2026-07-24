@@ -322,7 +322,7 @@ a {
   animation: note-float-left 5.5s ease-in-out infinite;
 }
 
-.time-note-austin {
+.time-note-chicago {
   right: 0;
   bottom: 112px;
   animation: note-float-right 6s ease-in-out -2.4s infinite;
@@ -443,12 +443,12 @@ a {
   width: 15%;
 }
 
-.sleep-segment-austin {
+.sleep-segment-chicago {
   right: 0;
   width: 28%;
 }
 
-.busy-segment-austin {
+.busy-segment-chicago {
   left: 34%;
   width: 18%;
 }
@@ -1364,7 +1364,7 @@ a {
     left: 0;
   }
 
-  .time-note-austin {
+  .time-note-chicago {
     right: 0;
     bottom: 90px;
   }
