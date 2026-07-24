@@ -47,4 +47,23 @@ if (canTilt) {
       surface.style.setProperty("--tilt-y", "0deg");
     });
   });
+
+  document.querySelectorAll(".hero-product").forEach((stage) => {
+    const device = stage.querySelector(".device-hero");
+    if (!device) return;
+
+    stage.addEventListener("pointermove", (event) => {
+      const bounds = stage.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+      const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+
+      device.style.setProperty("--stage-x", `${(x * 13).toFixed(2)}px`);
+      device.style.setProperty("--stage-y", `${(y * 9).toFixed(2)}px`);
+    });
+
+    stage.addEventListener("pointerleave", () => {
+      device.style.setProperty("--stage-x", "0px");
+      device.style.setProperty("--stage-y", "0px");
+    });
+  });
 }
