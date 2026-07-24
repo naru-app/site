@@ -1,6 +1,14 @@
 document.documentElement.classList.add("has-js");
 
-const revealItems = document.querySelectorAll(".reveal");
+const revealItems = [
+  ...document.querySelectorAll("main > section:not(.hero):not(.screen-gallery)"),
+  ...document.querySelectorAll(".screen-story"),
+];
+
+revealItems.forEach((item, index) => {
+  item.classList.add("reveal");
+  item.style.setProperty("--reveal-delay", `${Math.min(index % 3, 2) * 55}ms`);
+});
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
@@ -17,4 +25,26 @@ if ("IntersectionObserver" in window) {
   revealItems.forEach((item) => observer.observe(item));
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
+}
+
+const canTilt =
+  window.matchMedia("(pointer: fine)").matches &&
+  !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (canTilt) {
+  document.querySelectorAll(".tilt-surface").forEach((surface) => {
+    surface.addEventListener("pointermove", (event) => {
+      const bounds = surface.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+      const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+
+      surface.style.setProperty("--tilt-x", `${(-y * 6).toFixed(2)}deg`);
+      surface.style.setProperty("--tilt-y", `${(x * 7).toFixed(2)}deg`);
+    });
+
+    surface.addEventListener("pointerleave", () => {
+      surface.style.setProperty("--tilt-x", "0deg");
+      surface.style.setProperty("--tilt-y", "0deg");
+    });
+  });
 }
