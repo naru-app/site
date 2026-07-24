@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#faf6ee">
-  <title>Naru — 롱디 커플의 타이밍을 한 화면에</title>
-  <meta name="description" content="롱디 커플이 직접 쓰려고 만든 iPhone 앱. 상대의 현지 시간과 날씨, iPhone·Google 캘린더 일정, 둘 다 되는 시간을 앱과 위젯에서 확인하세요.">
+  <title>Naru — 서로의 오늘이, 한눈에</title>
+  <meta name="description" content="커플이 각자의 시간과 날씨, 캘린더, 다음 약속과 쪽지를 함께 보는 iPhone 앱. 앱을 만드는 두 사람이 롱디를 시작하며 직접 만들었습니다.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ko_KR">
-  <meta property="og:title" content="Naru — 롱디 커플의 타이밍을 한 화면에">
-  <meta property="og:description" content="상대의 지금부터 둘이 되는 시간까지. 롱디 커플이 직접 쓰려고 만들었습니다.">
-  <meta property="og:image" content="https://naru-app.github.io/site/assets/screens/home.png">
+  <meta property="og:title" content="Naru — 서로의 오늘이, 한눈에">
+  <meta property="og:description" content="같이 있어도, 멀리 있어도. 둘의 시간과 일정, 다음 약속을 한곳에서 함께 봐요.">
+  <meta property="og:image" content="https://naru-app.github.io/site/assets/screens/home-new-york.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="./assets/naru-icon.png">
   <link rel="apple-touch-icon" href="./assets/naru-icon.png">
-  <link rel="preload" as="image" href="./assets/screens/home.png">
+  <link rel="preload" as="image" href="./assets/screens/home-new-york.png">
   <link rel="stylesheet" href="./styles.css">
   <script src="./script.js" defer></script>
 </head>
@@ -38,14 +38,13 @@
   <main id="main">
     <section class="hero page-width">
       <div class="hero-copy">
-        <p class="overline">SEOUL 11:37 PM · NEW YORK 10:37 AM</p>
-        <h1>둘이 통화할 시간,<br><em>Naru가 찾아드릴게요.</em></h1>
+        <h1>서로의 오늘이,<br><em>한눈에.</em></h1>
         <p class="hero-description">
-          각자 쓰던 캘린더를 연결하면 Naru가 시차를 맞추고,<br>
-          둘 다 깨어 있고 비는 시간을 찾아요.
+          Naru는 둘의 시간과 일정, 다음 약속을 함께 보는 커플 앱이에요.<br>
+          같이 있어도, 멀리 있어도 서로의 하루가 더 잘 보여요.
         </p>
         <div class="hero-actions">
-          <a class="release-notice-button" href="mailto:slee.iconlab@gmail.com?subject=Naru%20출시%20알림">출시 알림 받고 먼저 써보기</a>
+          <a class="release-notice-button" href="mailto:slee.iconlab@gmail.com?subject=Naru%20출시%20알림">출시 알림 받기</a>
 
           <!--
             App Store 출시 후:
@@ -61,22 +60,12 @@
           >
             <img src="./assets/app-store-badge-ko.svg" alt="App Store에서 다운로드" width="162" height="50">
           </a>
-          <a class="quiet-link" href="#features">Naru 살펴보기</a>
         </div>
-        <p class="availability">iPhone · 홈 화면 위젯 · iPhone 캘린더·Google Calendar 연동</p>
       </div>
 
       <div class="hero-product" aria-label="Naru 홈 화면 실제 스크린샷">
-        <div class="time-note time-note-seoul" aria-hidden="true">
-          <span>SEOUL</span>
-          <strong>11:37 PM</strong>
-        </div>
-        <div class="time-note time-note-new-york" aria-hidden="true">
-          <span>NEW YORK</span>
-          <strong>10:37 AM</strong>
-        </div>
         <figure class="device device-hero">
-          <img src="./assets/screens/home.png" alt="Edward와 Debbie의 현지 시간, 날씨와 하루 타임라인을 보여주는 Naru 홈 화면" width="1206" height="2622">
+          <img src="./assets/screens/home-new-york.png" alt="Edward와 Debbie의 현지 시간, 날씨와 하루 타임라인을 보여주는 Naru 홈 화면" width="1206" height="2622">
         </figure>
       </div>
     </section>
@@ -84,8 +73,8 @@
     <section class="overlap-proof page-width" aria-labelledby="overlap-proof-title">
       <div class="overlap-proof-copy">
         <p class="overline">ONE MOMENT, TWO DAYS</p>
-        <h2 id="overlap-proof-title">같은 순간을,<br>각자의 하루로.</h2>
-        <p>일정을 다시 계산하지 않아도 돼요. 도시와 시간대만 정하면 둘의 하루가 같은 축에 나란히 놓여요.</p>
+        <h2 id="overlap-proof-title">같은 순간을,<br>각자의 시간으로.</h2>
+        <p>내 일정과 상대 일정을 각자의 현지 시간에 맞춰, 둘 다 비는 시간까지 한 화면에 보여줘요.</p>
       </div>
       <div class="overlap-board" aria-label="서울과 뉴욕의 하루를 비교한 시간대 예시">
         <div class="overlap-row">
@@ -115,23 +104,36 @@
         <div class="overlap-result">
           <span class="overlap-result-line" aria-hidden="true"></span>
           <div>
-            <small>둘이 되는 시간</small>
-            <strong>지금부터 1시간 23분</strong>
+            <small>오늘 통화하기 좋은 시간</small>
+            <strong>지금부터 1시간 20분</strong>
           </div>
           <span class="overlap-status">둘 다 비어요</span>
         </div>
       </div>
     </section>
 
+    <section class="origin-story page-width" aria-labelledby="origin-title">
+      <p class="overline">WHY WE MADE NARU</p>
+      <div class="origin-statement">
+        <h2 id="origin-title">앱을 만드는 두 사람이,<br>롱디를 시작했어요.</h2>
+        <p>
+          한 사람의 퇴근은 다른 사람의 출근이 됐어요.
+          “지금 전화해도 돼?”, “이번 주말 몇 시가 괜찮아?”를 매번 계산하고 묻는 대신,
+          우리가 이미 쓰던 캘린더로 서로의 하루를 볼 방법이 필요했어요. 그래서 Naru를 만들었습니다.
+        </p>
+      </div>
+      <p class="origin-note">멀리 있을 때 특히 유용하고, 가까이 있는 날에도 둘의 일정과 기록은 그대로 이어져요.</p>
+    </section>
+
     <section class="principle widget-intro page-width" id="widgets">
       <p class="section-number">01</p>
       <div>
         <p class="overline">WIDGETS FIRST</p>
-        <h2>앱을 열기 전에도,<br>상대의 지금은 보여요.</h2>
+        <h2>앱을 열지 않아도,<br>서로의 오늘은 가까이에.</h2>
       </div>
       <p class="principle-copy">
-        시간·날씨·다음 일정부터 최근 쪽지와 다음 만남 후보까지.
-        자주 확인하는 건 홈 화면에 바로 꺼내뒀어요.
+        시간·날씨·다음 일정, 최근 쪽지와 다음 만남 후보까지.
+        자주 보는 건 홈 화면에서 바로 확인해요.
       </p>
     </section>
 
@@ -142,7 +144,7 @@
             <span>최근 쪽지</span>
             <span>↗</span>
           </div>
-          <p>오늘 끝나고 전화해줘 ☎️</p>
+          <p>퇴근하면 10분만 통화할래?</p>
           <small>Debbie · 8분 전</small>
         </div>
         <div class="widget-satellite widget-satellite-collection" aria-hidden="true">
@@ -150,8 +152,8 @@
             <span>다음 만남 후보</span>
             <span>♥</span>
           </div>
-          <p>성수 팝업 구경</p>
-          <p>한강 피크닉</p>
+          <p>성수 새로 생긴 와인바</p>
+          <p>다음 휴가, 포르투갈</p>
         </div>
         <figure class="widget-screenshot tilt-surface">
           <img src="./assets/screens/widgets.webp" alt="Debbie의 현지 시간, 날씨와 팀 미팅을 보여주는 Naru 실제 iPhone 홈 화면 위젯" width="1206" height="2622">
@@ -165,13 +167,13 @@
         </article>
         <article>
           <span>02</span>
-          <h3>둘의 일정</h3>
-          <p>이번 주와 다가오는 일정을 내 시간 기준으로.</p>
+          <h3>둘의 이번 주</h3>
+          <p>다가오는 일정을 내 시간 기준으로.</p>
         </article>
         <article>
           <span>03</span>
-          <h3>둘이 쌓은 것</h3>
-          <p>최근 쪽지와 다음 만남 후보도 홈 화면에.</p>
+          <h3>다음 약속과 한마디</h3>
+          <p>최근 쪽지와 데이트 후보도 홈 화면에.</p>
         </article>
       </div>
     </section>
@@ -180,57 +182,46 @@
       <p class="section-number">02</p>
       <div>
         <p class="overline">THE PRESENT</p>
-        <h2>전화할 타이밍을,<br>매번 묻지 않아도.</h2>
+        <h2>“지금 전화해도 돼?”를<br>묻기 전에 보여요.</h2>
       </div>
       <p class="principle-copy">
-        자는 중인지, 회의 중인지, 둘 다 비는지 바로 봐요.
+        자는 중인지, 일정 중인지, 둘 다 비는지.
+        위치 추적 없이 시간과 캘린더만으로 알 수 있어요.
       </p>
     </section>
 
     <section class="now-feature page-width">
       <div class="now-visual">
         <figure class="device device-detail">
-          <img src="./assets/screens/home.png" alt="Edward와 Debbie의 하루를 나란히 비교하는 Naru 실제 홈 화면" width="1206" height="2622">
+          <img src="./assets/screens/home-new-york.png" alt="Edward와 Debbie의 하루를 나란히 비교하는 Naru 실제 홈 화면" width="1206" height="2622">
         </figure>
       </div>
       <div class="now-copy">
         <article>
           <span>01</span>
-          <h3>각자의 지금</h3>
-          <p>내 시간과 상대 시간을 한 화면에 나란히.</p>
+          <h3>시간과 날씨</h3>
+          <p>서로의 지금을 한 화면에 나란히.</p>
         </article>
         <article>
           <span>02</span>
-          <h3>각자의 시간으로</h3>
-          <p>일정은 입력한 시간대를 기준으로 정확히 맞춰요.</p>
+          <h3>시차는 자동으로</h3>
+          <p>일정은 각자의 현지 시간에 정확히 맞춰요.</p>
         </article>
         <article>
           <span>03</span>
-          <h3>둘이 되는 시간</h3>
+          <h3>함께 비는 시간</h3>
           <p>둘 다 깨어 있고 비는 구간을 찾아줘요.</p>
         </article>
       </div>
-    </section>
-
-    <section class="origin-story page-width" aria-labelledby="origin-title">
-      <p class="overline">WHY WE MADE NARU</p>
-      <div class="origin-statement">
-        <h2 id="origin-title">롱디 중인 우리가,<br>매일 쓰려고 만들었어요.</h2>
-        <p>
-          “지금 전화해도 되나?”, “내 저녁 9시가 거긴 몇 시지?”
-          서로의 하루를 조금 덜 설명해도 알 수 있도록 Naru를 시작했어요.
-        </p>
-      </div>
-      <p class="origin-note">감시하는 기능은 빼고, 둘이 자주 보는 것만 담았어요.</p>
     </section>
 
     <section class="feature-intro page-width" id="features">
       <p class="section-number">03</p>
       <div>
         <p class="overline">THE THINGS YOU SHARE</p>
-        <h2>일정은 다시 쓰지 말고,<br>둘의 기록은 놓치지 말고.</h2>
+        <h2>각자 쓰던 캘린더는 그대로,<br>둘의 계획은 한곳에.</h2>
       </div>
-      <p>캘린더는 연결하고, 다음 만남과 짧은 쪽지는 함께 쌓아요.</p>
+      <p>외부 캘린더는 연결하고, 다음 데이트와 짧은 쪽지는 함께 쌓아요.</p>
     </section>
 
     <section class="screen-gallery page-width" aria-label="Naru 주요 기능">
@@ -242,10 +233,10 @@
             <i aria-hidden="true">+</i>
             <span>Google Calendar</span>
           </div>
-          <h3>쓰던 캘린더도,<br>둘의 시간으로.</h3>
+          <h3>각자 쓰던 캘린더를,<br>둘의 시간으로.</h3>
           <p>
-            iPhone 캘린더와 Google Calendar에서 공유할 것만 고르면 Naru와 위젯에 바로 합쳐져요.
-            일정은 각자의 현지 시간으로 정확히 바뀌어 보여요.
+            iPhone 캘린더와 Google Calendar에서 공유할 것만 고르면 Naru와 위젯에 함께 보여요.
+            시차가 있어도 일정은 각자의 현지 시간에 맞춰져요.
           </p>
         </div>
         <figure class="device device-gallery">
@@ -256,8 +247,8 @@
       <article class="screen-story screen-story-collection tilt-card">
         <div class="story-copy">
           <p class="story-index">COLLECTION · 02</p>
-          <h3>“다음에 가자”를<br>잊지 않게.</h3>
-          <p>맛집, 영화, 여행지를 둘이 한 목록에 모아요.</p>
+          <h3>“다음에 가자”를<br>진짜 다음 약속으로.</h3>
+          <p>“릴스에서 본 성수 와인바”, “다음 휴가엔 포르투갈”처럼 흘려보내기 쉬운 계획을 링크와 사진으로 모아요.</p>
         </div>
         <figure class="device device-gallery">
           <img src="./assets/screens/collection.png" alt="다음 만남의 아이디어를 모은 Naru 컬렉션 실제 화면" width="1206" height="2622">
@@ -267,8 +258,8 @@
       <article class="screen-story screen-story-notes tilt-card">
         <div class="story-copy">
           <p class="story-index">NOTES · 03</p>
-          <h3>바쁜 날엔,<br>긴 대화 말고 한마디.</h3>
-          <p>“오늘 끝나고 전화할래?”처럼 답을 재촉하지 않는 쪽지를 남겨요.</p>
+          <h3>바쁜 날엔,<br>대화 대신 한마디.</h3>
+          <p>“회의 끝나면 10분만 통화?”, “집 도착하면 알려줘”처럼 답을 재촉하지 않는 쪽지를 남겨요.</p>
         </div>
         <figure class="device device-gallery">
           <img src="./assets/screens/notes.png" alt="Edward와 Debbie가 서로 남긴 Naru 쪽지 실제 화면" width="1206" height="2622">
@@ -326,9 +317,9 @@
       <a class="wordmark wordmark-large" href="./index.html" aria-label="Naru 홈">
         <img class="wordmark-dark" src="./assets/naru-wordmark-dark.png" alt="Naru" width="929" height="310">
       </a>
-      <h2>서로 다른 하루가,<br>조금 더 자주 만나도록.</h2>
-      <p>처음 연결하면 Plus 7일이 시작돼요. 카드 등록과 자동 결제는 없어요.</p>
-      <a class="release-notice-button release-notice-button-light" href="mailto:slee.iconlab@gmail.com?subject=Naru%20출시%20알림">출시 알림 받고 먼저 써보기</a>
+      <h2>서로의 오늘을,<br>Naru에서 함께 봐요.</h2>
+      <p>같은 도시에 있어도, 다른 시간대에 있어도. 처음 연결하면 Plus 7일이 시작되고 자동 결제는 없어요.</p>
+      <a class="release-notice-button release-notice-button-light" href="mailto:slee.iconlab@gmail.com?subject=Naru%20출시%20알림">출시 알림 받기</a>
     </section>
   </main>
 
@@ -337,7 +328,7 @@
       <a class="wordmark" href="./index.html" aria-label="Naru 홈">
         <img class="wordmark-light" src="./assets/naru-wordmark.png" alt="Naru" width="929" height="310">
       </a>
-      <p>서로 다른 시간에 사는 커플을 위한 앱</p>
+      <p>서로의 오늘을 함께 보는 커플 앱</p>
     </div>
     <div class="footer-links">
       <a href="./privacy.html">개인정보 처리방침</a>
