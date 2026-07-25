@@ -31,7 +31,7 @@
         <a href="#features">기능</a>
         <a href="#plus">Naru Plus</a>
       </nav>
-      <a class="header-action" href="#download">출시 알림</a>
+      <a class="header-action" href="#testflight">테스트 신청</a>
     </div>
   </header>
 
@@ -44,7 +44,8 @@
           같이 있어도, 멀리 있어도 서로의 하루가 더 잘 보여요.
         </p>
         <div class="hero-actions">
-          <a class="release-notice-button" href="mailto:slee.iconlab@gmail.com?subject=Naru%20출시%20알림">출시 알림 받기</a>
+          <a class="release-notice-button" href="#testflight">TestFlight 테스트 신청</a>
+          <p class="hero-actions-note">출시 전 베타 · iPhone iOS 17 이상</p>
 
           <!--
             App Store 출시 후:
@@ -341,13 +342,41 @@
       </div>
     </section>
 
-    <section class="final-cta page-width" id="download">
+    <section class="final-cta page-width" id="testflight">
       <a class="wordmark wordmark-large" href="./index.html" aria-label="Naru 홈">
         <img class="wordmark-dark" src="./assets/naru-wordmark-dark.png" alt="Naru" width="929" height="310">
       </a>
-      <h2>서로의 오늘을,<br>Naru에서 함께 봐요.</h2>
-      <p>같은 도시에 있어도, 다른 시간대에 있어도. 처음 연결하면 모든 Plus 기능이 7일간 열리고 자동 결제는 없어요.</p>
-      <a class="release-notice-button release-notice-button-light" href="mailto:slee.iconlab@gmail.com?subject=Naru%20출시%20알림">출시 알림 받기</a>
+      <p class="overline overline-light">TESTFLIGHT BETA</p>
+      <h2>출시 전에,<br>먼저 써보실래요?</h2>
+      <p>App Store 출시 전 TestFlight로 Naru를 먼저 쓸 수 있어요. 이름과 이메일을 남겨주시면 초대장을 보내드릴게요. 처음 연결하면 모든 Plus 기능이 7일간 열리고 자동 결제는 없어요.</p>
+
+      <form class="testflight-form" id="testflight-form" novalidate>
+        <div class="testflight-fields">
+          <label class="testflight-field">
+            <span>이름 <em>가명도 괜찮아요</em></span>
+            <input type="text" name="name" required maxlength="40" autocomplete="nickname" placeholder="나루">
+          </label>
+          <label class="testflight-field">
+            <span>이메일 <em>TestFlight 초대를 받을 주소</em></span>
+            <input type="email" name="email" required maxlength="254" autocomplete="email" inputmode="email" placeholder="you@example.com">
+          </label>
+        </div>
+
+        <!-- 사람에게는 보이지 않는 입력란. 값이 채워지면 봇으로 보고 저장하지 않는다. -->
+        <div class="testflight-decoy" aria-hidden="true">
+          <label for="testflight-website">웹사이트</label>
+          <input type="text" id="testflight-website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <label class="testflight-consent">
+          <input type="checkbox" name="privacyConsent" required>
+          <span>TestFlight 초대와 베타 안내를 위해 이름·이메일을 수집·이용하는 데 동의해요. 그 외 목적으로 쓰지 않고 <a href="./privacy.html">개인정보 처리방침</a>에 따라 처리해요.</span>
+        </label>
+
+        <button class="release-notice-button release-notice-button-light" type="submit">테스트 신청하기</button>
+        <p class="testflight-status" role="status" aria-live="polite"></p>
+        <p class="testflight-note">신청 후 App Store Connect에서 보내는 TestFlight 초대 메일을 받게 돼요. iPhone에 <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight 앱</a>이 필요하고, iOS 17 이상에서 동작해요.</p>
+      </form>
     </section>
   </main>
 

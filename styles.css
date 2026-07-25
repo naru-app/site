@@ -186,6 +186,14 @@ a {
   gap: 22px;
 }
 
+.hero-actions-note {
+  margin: 0;
+  max-width: 150px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
 .release-notice-button {
   min-height: 54px;
   padding: 0 22px;
@@ -1074,6 +1082,140 @@ a {
   border-color: rgba(255, 255, 255, 0.55);
 }
 
+.overline-light {
+  margin: 0 0 14px;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.testflight-form {
+  width: min(560px, 100%);
+  margin-top: 8px;
+  display: grid;
+  gap: 18px;
+  text-align: left;
+}
+
+.testflight-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.testflight-field {
+  display: grid;
+  gap: 8px;
+}
+
+.testflight-field span {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.testflight-field em {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.testflight-field input {
+  min-height: 52px;
+  padding: 0 16px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 14px;
+  font: inherit;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.testflight-field input::placeholder {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.testflight-field input:focus {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.7);
+  outline: none;
+}
+
+.testflight-field input[aria-invalid="true"] {
+  border-color: var(--coral);
+}
+
+/* 봇 유인용 입력란이라 화면에서 완전히 빼되 display:none은 피한다. */
+.testflight-decoy {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.testflight-consent {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: start;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.testflight-consent input {
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  accent-color: var(--coral);
+}
+
+.testflight-consent a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.testflight-form .release-notice-button {
+  justify-content: center;
+  justify-self: start;
+}
+
+.testflight-form button[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.final-cta .testflight-status {
+  margin: 0;
+  min-height: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.final-cta .testflight-status:empty {
+  display: none;
+}
+
+.final-cta .testflight-status[data-state="error"] {
+  color: #ffc4b2;
+}
+
+.final-cta .testflight-note {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.final-cta .testflight-note a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .site-footer {
   padding: 40px 0 45px;
   display: grid;
@@ -1396,6 +1538,11 @@ a {
     justify-items: center;
   }
 
+  .hero-actions-note {
+    max-width: none;
+    text-align: center;
+  }
+
   .hero-product {
     min-height: 540px;
   }
@@ -1613,6 +1760,14 @@ a {
     margin-bottom: 70px;
     padding: 90px 24px;
     border-radius: 0;
+  }
+
+  .testflight-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .testflight-form .release-notice-button {
+    justify-self: stretch;
   }
 
   .site-footer {
