@@ -829,34 +829,137 @@ a {
 
 .plus {
   padding: 130px 0;
-  display: grid;
-  grid-template-columns: minmax(300px, 0.88fr) minmax(480px, 1.12fr);
-  gap: 90px;
   border-top: 1px solid var(--line);
 }
 
-.plus-heading > p:last-child {
-  max-width: 500px;
+.plus-heading {
+  display: grid;
+  grid-template-columns: minmax(460px, 1.1fr) minmax(340px, 0.9fr);
+  align-items: end;
+  gap: 90px;
+}
+
+.plus-heading .overline {
+  grid-column: 1 / -1;
+  margin-bottom: -48px;
+}
+
+.plus-lead {
+  max-width: 520px;
   margin: 28px 0 0;
   color: var(--muted);
   font-size: 17px;
   line-height: 1.8;
 }
 
-.plus-facts {
+.plus-access-grid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.82fr) minmax(480px, 1.18fr);
+  gap: 20px;
+}
+
+.plus-access-card {
+  padding: 34px;
+  border-radius: 30px;
+}
+
+.plus-access-card h3 {
   margin: 0;
+  font-size: clamp(27px, 2.6vw, 38px);
+  line-height: 1.16;
+  letter-spacing: -0.055em;
+}
+
+.plus-access-label {
+  margin: 0 0 22px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.plus-access-card ul {
+  margin: 32px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+  list-style: none;
+}
+
+.plus-access-card li {
+  position: relative;
+  padding: 15px 0 15px 24px;
+  line-height: 1.55;
+  border-top: 1px solid;
+}
+
+.plus-access-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  font-weight: 800;
+}
+
+.plus-access-free {
+  color: var(--ink);
+  background: #f3eee7;
+  border: 1px solid var(--line);
+}
+
+.plus-access-free .plus-access-label,
+.plus-access-free li::before {
+  color: var(--coral);
+}
+
+.plus-access-free li {
+  color: var(--muted);
+  border-color: rgba(39, 34, 48, 0.1);
+}
+
+.plus-access-premium {
+  color: white;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(159, 135, 204, 0.34), transparent 34%),
+    var(--plum);
+  box-shadow: 0 30px 75px rgba(73, 55, 101, 0.18);
+}
+
+.plus-access-premium .plus-access-label,
+.plus-access-premium li::before {
+  color: #f5aa94;
+}
+
+.plus-access-premium li {
+  color: rgba(255, 255, 255, 0.78);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.plus-access-premium strong {
+  color: white;
+  font-weight: 720;
+}
+
+.plus-facts {
+  margin: 24px 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .plus-facts div {
-  padding: 26px 0;
-  display: grid;
-  grid-template-columns: 130px 1fr;
-  align-items: baseline;
-  border-top: 1px solid var(--line);
+  padding: 28px 24px;
+  display: block;
+  border-right: 1px solid var(--line);
+}
+
+.plus-facts div:first-child {
+  padding-left: 0;
 }
 
 .plus-facts div:last-child {
-  border-bottom: 1px solid var(--line);
+  padding-right: 0;
+  border-right: 0;
 }
 
 .plus-facts dt {
@@ -867,9 +970,15 @@ a {
 }
 
 .plus-facts dd {
-  margin: 0;
+  margin: 10px 0 0;
   color: var(--muted);
   line-height: 1.7;
+}
+
+.plus-footnote {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .trust {
@@ -1169,6 +1278,20 @@ a {
     grid-template-columns: 1fr;
     gap: 55px;
   }
+
+  .plus-heading {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .plus-heading .overline {
+    grid-column: auto;
+    margin-bottom: 2px;
+  }
+
+  .plus-lead {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 860px) {
@@ -1184,6 +1307,10 @@ a {
   .origin-note {
     grid-column: auto;
     margin-top: 18px;
+  }
+
+  .plus-access-grid {
+    grid-template-columns: 1fr;
   }
 
   .widget-feature,
@@ -1458,12 +1585,27 @@ a {
     padding: 95px 0;
   }
 
-  .plus-facts div {
-    grid-template-columns: 90px 1fr;
+  .plus-access-grid {
+    margin-top: 48px;
   }
 
-  .plus-facts dt {
-    font-size: 32px;
+  .plus-access-card {
+    padding: 28px 24px;
+    border-radius: 26px;
+  }
+
+  .plus-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .plus-facts div {
+    padding: 24px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .plus-facts div:last-child {
+    border-bottom: 0;
   }
 
   .final-cta {
