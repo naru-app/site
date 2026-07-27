@@ -509,6 +509,18 @@ a {
   margin: 30px 0 0;
 }
 
+.origin-quote {
+  max-width: 670px;
+  margin: 34px 0 0;
+  padding-left: 22px;
+  border-left: 3px solid var(--coral);
+  color: var(--plum);
+  font-size: clamp(21px, 2vw, 27px);
+  font-weight: 640;
+  line-height: 1.5;
+  letter-spacing: -0.04em;
+}
+
 .origin-note {
   margin: 12px 0 0;
   padding-top: 20px;
@@ -1667,6 +1679,11 @@ a {
 
   .origin-statement p {
     margin-top: 24px;
+  }
+
+  .origin-quote {
+    margin-top: 26px;
+    padding-left: 16px;
   }
 
   .origin-note {
