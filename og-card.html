@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Naru OG 카드 원본</title>
+  <!--
+    assets/og-card.png의 원본이다. 문구나 색을 바꾸면 이 파일을 고치고 다시 캡처한다.
+
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+        --headless --disable-gpu --hide-scrollbars \
+        --screenshot=assets/og-card.png --window-size=1200,630 \
+        --virtual-time-budget=4000 "file://$PWD/og-card.html"
+
+    카드는 피드에서 절반 이하 크기로 보이므로 본문 대신 그림이 말하게 둔다.
+    색은 styles.css의 :root와 같은 값이고, 한쪽만 고치면 어긋난다.
+  -->
+  <style>
+    :root {
+      --cream: #faf6ee;
+      --paper: #fffdf9;
+      --ink: #272230;
+      --muted: #756f7c;
+      --plum: #493765;
+      --coral: #ef8468;
+      --line: rgba(39, 34, 48, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      width: 1200px;
+      height: 630px;
+      padding: 62px 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      letter-spacing: -0.02em;
+      word-break: keep-all;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* 히어로와 같은 은은한 원. 카드가 납작해 보이지 않게 하는 정도로만 쓴다. */
+    body::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: -180px;
+      right: -160px;
+      width: 620px;
+      height: 620px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(143, 125, 189, 0.22), rgba(239, 132, 104, 0.14) 55%, transparent 72%);
+    }
+
+    .card-head,
+    .board { position: relative; z-index: 1; }
+
+    /* 워드마크 PNG는 알파가 없는 흰 배경이라 사이트와 같이 multiply로 얹는다. */
+    .wordmark {
+      width: 104px;
+      height: auto;
+      mix-blend-mode: multiply;
+    }
+
+    h1 {
+      margin: 26px 0 0;
+      font-size: 68px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.055em;
+    }
+
+    h1 em {
+      color: var(--coral);
+      font-style: normal;
+    }
+
+    .stage {
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 22px;
+    }
+
+    .board {
+      margin-top: 44px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 186px minmax(0, 1fr);
+      align-items: center;
+      gap: 26px;
+    }
+
+    .who {
+      display: grid;
+      grid-template-columns: 13px 1fr;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .dot {
+      width: 13px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
+
+    .dot-plum { background: var(--plum); }
+    .dot-coral { background: var(--coral); }
+
+    .who strong { font-size: 21px; }
+
+    .who time {
+      grid-column: 2;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 19px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .track {
+      position: relative;
+      height: 22px;
+      overflow: hidden;
+      background: #ece7df;
+      border-radius: 999px;
+    }
+
+    .sleep,
+    .busy {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+
+    .sleep { background: rgba(73, 55, 101, 0.18); }
+    .busy { background: var(--coral); }
+
+    /* index.html의 overlap-board와 같은 순간이다 — 서울 오후 2시, 뉴욕 새벽 1시. */
+    .sleep { left: 0; width: 33.3%; }
+    .busy-seoul { left: 70.8%; width: 4.2%; }
+    .busy-new-york { left: 66.7%; width: 2.1%; }
+
+    .now {
+      position: absolute;
+      z-index: 2;
+      top: -4px;
+      bottom: -4px;
+      width: 3px;
+      background: var(--ink);
+      box-shadow: 0 0 0 7px rgba(255, 253, 249, 0.7);
+    }
+
+    .now-seoul { left: 58.9%; }
+    .now-new-york { left: 4.5%; }
+
+    .result {
+      margin-top: 12px;
+      padding: 28px 32px;
+      display: grid;
+      grid-template-columns: 44px 1fr auto;
+      align-items: center;
+      gap: 22px;
+      color: white;
+      background: var(--plum);
+      border-radius: 26px;
+    }
+
+    .result-line {
+      width: 44px;
+      height: 3px;
+      background: var(--coral);
+    }
+
+    .result small {
+      display: block;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 17px;
+    }
+
+    .result strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 34px;
+      letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .status {
+      padding: 11px 16px;
+      color: #543427;
+      background: #f7c3b3;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="card-head">
+    <img class="wordmark" src="./assets/naru-wordmark.png" alt="Naru" width="929" height="310">
+    <h1>서로의 오늘이, <em>한눈에.</em></h1>
+    <!-- 출시 후에는 이 줄을 "iPhone · App Store"로 바꾸고 카드를 다시 캡처한다. -->
+    <p class="stage">iPhone · TestFlight 베타 진행 중</p>
+  </div>
+
+  <div class="board">
+    <div class="row">
+      <div class="who">
+        <span class="dot dot-plum"></span>
+        <strong>서울</strong>
+        <time>2:08 PM</time>
+      </div>
+      <div class="track">
+        <span class="sleep"></span>
+        <span class="busy busy-seoul"></span>
+        <span class="now now-seoul"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="who">
+        <span class="dot dot-coral"></span>
+        <strong>뉴욕</strong>
+        <time>1:08 AM</time>
+      </div>
+      <div class="track">
+        <span class="sleep"></span>
+        <span class="busy busy-new-york"></span>
+        <span class="now now-new-york"></span>
+      </div>
+    </div>
+    <div class="result">
+      <span class="result-line"></span>
+      <div>
+        <small>오늘 둘 다 여유로운 시간</small>
+        <strong>9:00 PM–12:00 AM</strong>
+      </div>
+      <span class="status">서울 기준</span>
+    </div>
+  </div>
+</body>
+</html>
