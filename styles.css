@@ -724,6 +724,29 @@ a {
   line-height: 1.7;
 }
 
+/* 무료로 쓸 수 있는 위젯이 하나뿐이라, 카드마다 등급을 붙여 오해를 줄인다. */
+.widget-tier {
+  grid-column: 2;
+  justify-self: start;
+  margin-top: 10px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.widget-tier-free {
+  color: #2a2336;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.widget-tier-plus {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.16);
+}
+
 .feature-intro {
   padding-top: 0;
   border-top: 0;
