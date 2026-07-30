@@ -101,10 +101,6 @@ a {
   height: auto;
 }
 
-.wordmark-light {
-  mix-blend-mode: multiply;
-}
-
 .header-inner nav {
   margin-left: auto;
   display: flex;
