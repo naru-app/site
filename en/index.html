@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf6ee">
+  <meta name="google-site-verification" content="WSGyWVvkNUWFHzn_Nf76sFw_N04LbT2hM5UgcbsUwQw">
+  <title>Naru — Each other's day, at a glance · An app for couples apart</title>
+  <meta name="application-name" content="Naru">
+  <meta name="description" content="A couple app that finds the hours you're both free. For two people on different rhythms, it puts their right-now on one widget. Built by two people who went long-distance themselves.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="Naru">
+  <meta property="og:title" content="Naru — Each other's day, at a glance">
+  <meta property="og:description" content="Naru finds the hours you're both free. Even far apart. Even out of sync.">
+  <!-- 공유 카드는 1200×630 PNG로 따로 만든다. 세로 스크린샷은 카드에서 잘리고,
+       카카오톡·트위터 등 일부 크롤러는 WebP를 읽지 못한다.
+       원본은 og-card.html이고, 문구를 바꾸면 거기서 다시 캡처한다. -->
+  <meta property="og:image" content="https://naru-app.store/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Naru — Each other's day, at a glance. A card placing 2 PM in Seoul beside 1 AM in New York and finding the hours they are both free, 9 PM to midnight.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://naru-app.store/assets/og-card.png">
+  <link rel="canonical" href="https://naru-app.store/">
+  <link rel="icon" href="../assets/naru-icon.png">
+  <link rel="apple-touch-icon" href="../assets/naru-icon.png">
+  <link rel="preload" as="image" href="../assets/screens/en/home-new-york.webp">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Naru",
+      "url": "https://naru-app.store/",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS"
+    }
+  </script>
+  <link rel="alternate" hreflang="ko" href="https://naru-app.store/">
+  <link rel="alternate" hreflang="en" href="https://naru-app.store/en/">
+  <link rel="alternate" hreflang="x-default" href="https://naru-app.store/">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="./index.html" aria-label="Naru home">
+        <img class="wordmark-light" src="../assets/naru-wordmark.png" alt="Naru" width="929" height="310">
+      </a>
+      <nav aria-label="Main menu">
+        <a href="#widgets">Widgets</a>
+        <a href="#features">Features</a>
+        <a href="#plus">Naru Membership</a>
+      </nav>
+      <a class="header-action" href="#testflight">Join the beta</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero page-width">
+      <div class="hero-copy">
+        <p class="overline">Naru</p>
+        <h1>Each other's day,<br><em>at a glance.</em></h1>
+        <p class="hero-description">
+          Naru finds the hours you're both free.<br>
+          Even far apart. Even out of sync.
+        </p>
+        <div class="hero-actions">
+          <a class="release-notice-button" href="#testflight">Join the TestFlight beta</a>
+          <p class="hero-actions-note">Pre-release beta · iPhone, iOS 17 or later</p>
+
+          <!--
+            App Store 출시 후:
+            1. 아래 a 요소에 실제 제품 페이지 주소를 href로 추가합니다.
+            2. hidden을 제거합니다.
+            3. 위 release-notice-button을 제거합니다.
+            Apple 지침에 따라 이 공식 배지는 페이지에서 한 번만 노출합니다.
+          -->
+          <a
+            class="app-store-badge-link"
+            aria-label="Download Naru on the App Store"
+            hidden
+          >
+            <img src="../assets/app-store-badge-ko.svg" alt="Download on the App Store" width="162" height="50">
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-product" aria-label="Actual screenshot of the Naru home screen">
+        <figure class="device device-hero">
+          <img src="../assets/screens/en/home-new-york.webp" alt="Naru home screen showing Eddie at 8:45 PM, Debbie at 7:45 AM, and the hours they are both free today" width="1206" height="2622">
+        </figure>
+      </div>
+    </section>
+
+    <section class="overlap-proof page-width" aria-labelledby="overlap-proof-title">
+      <div class="overlap-proof-copy">
+        <p class="overline">ONE MOMENT, TWO DAYS</p>
+        <h2 id="overlap-proof-title">One moment,<br>two local times.</h2>
+        <p>Your events and theirs, each in its own local time — and the hours you're both free, on one screen.</p>
+      </div>
+      <div class="overlap-board" aria-label="Time zone example comparing a day in Seoul and New York">
+        <div class="overlap-row">
+          <div class="overlap-person">
+            <span class="person-dot person-dot-plum" aria-hidden="true"></span>
+            <strong>Seoul</strong>
+            <time>2:08 PM</time>
+          </div>
+          <div class="day-track" aria-hidden="true">
+            <span class="sleep-segment sleep-segment-seoul"></span>
+            <span class="busy-segment busy-segment-seoul"></span>
+            <span class="now-marker now-marker-seoul"></span>
+          </div>
+        </div>
+        <div class="overlap-row">
+          <div class="overlap-person">
+            <span class="person-dot person-dot-coral" aria-hidden="true"></span>
+            <strong>New York</strong>
+            <time>1:08 AM</time>
+          </div>
+          <div class="day-track" aria-hidden="true">
+            <span class="sleep-segment sleep-segment-new-york"></span>
+            <span class="busy-segment busy-segment-new-york"></span>
+            <span class="now-marker now-marker-new-york"></span>
+          </div>
+        </div>
+        <div class="overlap-result">
+          <span class="overlap-result-line" aria-hidden="true"></span>
+          <div>
+            <small>Free for both, today</small>
+            <strong>9:00 PM–12:00 AM</strong>
+          </div>
+          <span class="overlap-status">Seoul time</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="origin-story page-width" aria-labelledby="origin-title">
+      <p class="overline">WHY WE MADE NARU</p>
+      <div class="origin-statement">
+        <h2 id="origin-title">The two of us building this<br>went long-distance.</h2>
+        <!-- 본문을 읽지 않고 훑는 사람이 대부분이라, 이 한 줄만 봐도 왜 만들었는지 알게 둔다. -->
+        <blockquote class="origin-quote">
+          We tried a few couple apps.<br>Each one just added another chore.
+        </blockquote>
+        <p>
+          One person's evening became the other's morning.
+          Instead of working out “can I call now?” and “what time works this weekend?” every single time,
+          we wanted to see each other's day through the calendars we already used. So we built Naru.
+        </p>
+      </div>
+      <p class="origin-note">It helps most when you're far apart, and it keeps working on the days you're together.</p>
+    </section>
+
+    <section class="principle page-width" id="now">
+      <p class="section-number">01</p>
+      <div>
+        <p class="overline">THE PRESENT</p>
+        <h2>See it before you ask<br>“can I call right now?”</h2>
+      </div>
+      <p class="principle-copy">
+        Asleep, busy, or both free.
+        From times and calendars alone — no location tracking.
+      </p>
+    </section>
+
+    <section class="now-feature page-width">
+      <div class="now-visual">
+        <figure class="device device-detail">
+          <img src="../assets/screens/en/home-new-york.webp" alt="Naru home timeline placing both people's events side by side in their own local times" width="1206" height="2622">
+        </figure>
+      </div>
+      <div class="now-copy">
+        <article>
+          <span>01</span>
+          <h3>Time and weather</h3>
+          <p>Both of your right-nows, side by side.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Time zones handled</h3>
+          <p>Every event lands in the right local time.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Hours you're both free</h3>
+          <p>Naru finds the windows when neither of you is busy.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="principle widget-intro page-width" id="widgets">
+      <p class="section-number">02</p>
+      <div>
+        <p class="overline">WIDGETS FIRST</p>
+        <h2>Without opening the app,<br>their day stays close.</h2>
+      </div>
+      <p class="principle-copy">
+        Their time and their day <strong>appear on your Home Screen</strong> as soon as you pair.
+        Widgets that hold both of you on one tile — same sky, their day, free hours, latest note — unlock with a membership.
+      </p>
+    </section>
+
+    <section class="widget-feature page-width">
+      <div class="widget-visual">
+        <div class="widget-satellite widget-satellite-note" aria-hidden="true">
+          <div class="satellite-header">
+            <span>Latest note</span>
+            <span>↗</span>
+          </div>
+          <p>Ten minutes on the phone after work?</p>
+          <small>Debbie · 8 min ago</small>
+        </div>
+        <div class="widget-satellite widget-satellite-collection" aria-hidden="true">
+          <div class="satellite-header">
+            <span>Next time we meet</span>
+            <span>♥</span>
+          </div>
+          <p>That new wine bar in Seongsu</p>
+          <p>Portugal, next holiday</p>
+        </div>
+        <figure class="widget-screenshot tilt-surface">
+          <img src="../assets/screens/en/widgets.webp" alt="iPhone Home Screen with the Naru dial widget, two rings tracing each person's day" width="1206" height="2622">
+        </figure>
+      </div>
+      <div class="widget-copy">
+        <article>
+          <span>01</span>
+          <h3>The two-person dial</h3>
+          <p>Two rings, one for each day. See where you both are at a glance.</p>
+          <em class="widget-tier widget-tier-free">Free</em>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Hours you're both free</h3>
+          <p>The windows you can call today, right there.</p>
+          <em class="widget-tier widget-tier-plus">Naru Membership</em>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Same sky · Their day · Latest note</h3>
+          <p>Three more widgets to pick from.</p>
+          <em class="widget-tier widget-tier-plus">Naru Membership</em>
+        </article>
+      </div>
+    </section>
+
+    <section class="feature-intro page-width" id="features">
+      <p class="section-number">03</p>
+      <div>
+        <p class="overline">THE THINGS YOU SHARE</p>
+        <h2>Keep your own calendar.<br>Share the plans.</h2>
+      </div>
+      <p>Connect the calendars you already use, and collect your next date and short notes together.</p>
+    </section>
+
+    <section class="screen-gallery page-width" aria-label="Naru key features">
+      <article class="screen-story screen-story-calendar tilt-card" id="calendar-link">
+        <div class="story-copy">
+          <p class="story-index">CALENDAR · 01</p>
+          <div class="calendar-sources" aria-label="iPhone Calendar and Google Calendar integration">
+            <span>iPhone Calendar</span>
+            <i aria-hidden="true">+</i>
+            <span>Google Calendar</span>
+          </div>
+          <h3>The calendars you already use,<br>in both your times.</h3>
+          <p>
+            Naru reads the iPhone Calendar and Google Calendar events you select, read-only, and shows them
+            in Naru and its widgets. It never creates, edits, or deletes Google Calendar events,
+            and across time zones it always shows each event in the right local time.
+          </p>
+        </div>
+        <figure class="device device-gallery">
+          <img src="../assets/screens/en/calendar.webp" alt="The Naru calendar showing both people's events together" width="1206" height="2622">
+        </figure>
+      </article>
+
+      <article class="screen-story screen-story-collection tilt-card">
+        <div class="story-copy">
+          <p class="story-index">BUCKET · 02</p>
+          <h3>Share it the moment you find it,<br>find it again when you need it.</h3>
+          <p>Share from YouTube, Instagram, or Photos and the link, text, and image land in one list. Search by tag or by when you saved it, then tap to see the image and the original in full. Up to 100 things between you — just the ones you really want.</p>
+        </div>
+        <figure class="device device-gallery collection-device">
+          <img src="../assets/screens/en/collection.webp" alt="The Naru bucket with tags, saved times, and link thumbnails" width="1206" height="2622" loading="lazy">
+        </figure>
+      </article>
+
+      <article class="screen-story screen-story-notes tilt-card">
+        <div class="story-copy">
+          <p class="story-index">NOTES · 03</p>
+          <h3>On a busy day,<br>one line instead of a conversation.</h3>
+          <p>Leave a note that doesn't demand a reply — “ten minutes after my meeting?”, “tell me when you're home”.</p>
+        </div>
+        <figure class="device device-gallery">
+          <img src="../assets/screens/en/notes.webp" alt="Naru notes that Eddie and Debbie left for each other" width="1206" height="2622">
+        </figure>
+      </article>
+    </section>
+
+    <section class="plus page-width" id="plus">
+      <div class="plus-heading">
+        <p class="overline">NARU MEMBERSHIP</p>
+        <h2>Try everything first.<br>Then only one of you pays.</h2>
+        <p class="plus-lead">
+          The moment you first pair, every feature opens for 7 days.
+          No card up front, and nothing charged when the trial ends — you decide after actually using it together.
+        </p>
+      </div>
+
+      <div class="plus-access-grid" aria-label="Naru free features compared with membership features">
+        <article class="plus-access-card plus-access-free">
+          <p class="plus-access-label">Still free after 7 days</p>
+          <h3>Your pairing and everything<br>you saved stay put.</h3>
+          <ul>
+            <li>Their current time and weather</li>
+            <li>Shared Naru events</li>
+            <li>Bucket and notes</li>
+            <li>The default Home Screen widget</li>
+          </ul>
+        </article>
+
+        <article class="plus-access-card plus-access-premium">
+          <p class="plus-access-label">Free for the first 7 days · Naru Membership</p>
+          <h3>Let Naru do<br>the time math.</h3>
+          <ul>
+            <li><strong>Shared events</strong> you both create and edit</li>
+            <li><strong>iPhone·Google Calendar</strong> events you select, synced</li>
+            <li><strong>Hours you're both free</strong>  worked out automatically</li>
+            <li>Extra Home and Lock Screen widgets for <strong>events, notes, and bucket</strong></li>
+            <li><strong>Siri, Shortcuts, Control Center</strong> — check in one step</li>
+            <li>Their changes appear <strong>right away,</strong> no waiting</li>
+            <li>Naru character props, just for you two</li>
+          </ul>
+        </article>
+      </div>
+
+      <dl class="plus-facts">
+        <div>
+          <dt>7 days</dt>
+          <dd>the moment you first pair<br>every feature opens</dd>
+        </div>
+        <div>
+          <dt>Monthly / annual</dt>
+          <dd>keep going with a subscription,<br>cancel any time</dd>
+        </div>
+        <div>
+          <dt>Lifetime</dt>
+          <dd>one payment,<br>no renewals</dd>
+        </div>
+      </dl>
+      <!-- 자동 갱신 구독을 파는 이상, 갱신 조건을 랜딩에서도 밝힌다.
+           앱 안 페이월과 Terms of Service 9조가 같은 말을 해야 한다. -->
+      <p class="plus-footnote">
+        A membership bought by  <strong>one person applies to both</strong> paired people.
+        Monthly and annual plans renew until you cancel, and you can cancel any time in iOS Settings.
+        Lifetime is a single payment with no renewal. Full conditions are in the <a href="./terms.html">Terms of Service</a>.
+        When the trial ends, your past events and everything you built together stay.
+      </p>
+    </section>
+
+    <section class="trust page-width">
+      <div>
+        <p class="overline">MADE FOR TWO</p>
+        <h2>Share what matters.<br>Not your location.</h2>
+      </div>
+      <div class="trust-list">
+        <article>
+          <h3>City and time zone only</h3>
+          <p>We never receive live location.</p>
+        </article>
+        <article>
+          <h3>No ads, no tracking</h3>
+          <p>What you save is never used for advertising.</p>
+        </article>
+        <article>
+          <h3>Unpair any time</h3>
+          <p>Sharing stops the moment you disconnect.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="final-cta page-width" id="testflight">
+      <a class="wordmark wordmark-large" href="./index.html" aria-label="Naru home">
+        <img class="wordmark-dark" src="../assets/naru-wordmark-dark.png" alt="Naru" width="929" height="310">
+      </a>
+      <p class="overline overline-light">TESTFLIGHT BETA</p>
+      <h2>Want to try it<br>before launch?</h2>
+      <p>You can use Naru through TestFlight before it reaches the App Store. Leave your name and email and we'll send an invitation. Every feature opens for 7 days when you first pair, and nothing is charged when the trial ends.</p>
+
+      <form class="testflight-form" id="testflight-form" novalidate>
+        <div class="testflight-fields">
+          <label class="testflight-field">
+            <span>Name <em>A pseudonym is fine</em></span>
+            <input type="text" name="name" required maxlength="40" autocomplete="nickname" placeholder="Eddie">
+          </label>
+          <label class="testflight-field">
+            <span>Email <em>Where we'll send the invitation</em></span>
+            <input type="email" name="email" required maxlength="254" autocomplete="email" inputmode="email" placeholder="eddie@example.com">
+          </label>
+        </div>
+
+        <!-- 사람에게는 보이지 않는 입력란. 값이 채워지면 봇으로 보고 저장하지 않는다. -->
+        <div class="testflight-decoy" aria-hidden="true">
+          <label for="testflight-website">Website</label>
+          <input type="text" id="testflight-website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <label class="testflight-consent">
+          <input type="checkbox" name="privacyConsent" required>
+          <span>I agree to my name and email being collected and used to send the TestFlight invitation and beta updates. They are used for nothing else and handled under the <a href="./privacy.html">Privacy Policy</a>.</span>
+        </label>
+
+        <button class="release-notice-button release-notice-button-light" type="submit">Apply for the beta</button>
+        <p class="testflight-status" role="status" aria-live="polite"></p>
+        <p class="testflight-note">After applying you'll get a TestFlight invitation email from App Store Connect. You'll need the <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight</a> app on your iPhone, and iOS 17 or later.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer page-width">
+    <div>
+      <a class="wordmark" href="./index.html" aria-label="Naru home">
+        <img class="wordmark-light" src="../assets/naru-wordmark.png" alt="Naru" width="929" height="310">
+      </a>
+      <p>An app for couples to see each other's day</p>
+    </div>
+    <div class="footer-links">
+      <a href="./privacy.html">Privacy Policy</a>
+      <a href="./terms.html">Terms of Service</a>
+      <a href="mailto:slee.iconlab@gmail.com">Contact</a>
+      <a href="../index.html" hreflang="ko">한국어</a>
+    </div>
+    <div class="legal">
+      <p class="copyright">© 2026 Naru</p>
+      <p class="apple-credit">Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>
+    </div>
+  </footer>
+</body>
+</html>
