@@ -9,7 +9,7 @@
   <meta name="application-name" content="Naru">
   <meta name="description" content="A couple app that finds the hours you're both free. For two people on different rhythms, it puts their right-now on one widget. Built by two people who went long-distance themselves.">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="ko_KR">
+  <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Naru">
   <meta property="og:title" content="Naru — Each other's day, at a glance">
   <meta property="og:description" content="Naru finds the hours you're both free. Even far apart. Even out of sync.">
@@ -55,7 +55,7 @@
         <a href="#features">Features</a>
         <a href="#plus">Naru Membership</a>
       </nav>
-      <a class="header-action" href="#testflight">Join the beta</a>
+      <a class="header-action" href="https://testflight.apple.com/join/druuDewe" rel="noopener">Get it on TestFlight</a>
     </div>
   </header>
 
@@ -69,18 +69,16 @@
           Even far apart. Even out of sync.
         </p>
         <div class="hero-actions">
-          <a class="release-notice-button" href="#testflight">Join the TestFlight beta</a>
-          <p class="hero-actions-note">Pre-release beta · iPhone, iOS 17 or later</p>
+          <a class="release-notice-button" href="https://testflight.apple.com/join/druuDewe" rel="noopener">Try it first on TestFlight</a>
+          <p class="hero-actions-note">Getting ready for the App Store · iPhone, iOS 17+</p>
 
           <!--
-            App Store 출시 후:
-            1. 아래 a 요소에 실제 제품 페이지 주소를 href로 추가합니다.
-            2. hidden을 제거합니다.
-            3. 위 release-notice-button을 제거합니다.
-            Apple 지침에 따라 이 공식 배지는 페이지에서 한 번만 노출합니다.
+            App Store 출시 후: 아래 a의 hidden을 지우고 위 release-notice-button을 지운다.
+            href는 미리 채워 뒀다. Apple 지침에 따라 공식 배지는 페이지에서 한 번만 노출한다.
           -->
           <a
             class="app-store-badge-link"
+            href="https://apps.apple.com/app/id6801597847"
             aria-label="Download Naru on the App Store"
             hidden
           >
@@ -387,37 +385,11 @@
       <a class="wordmark wordmark-large" href="./index.html" aria-label="Naru home">
         <img class="wordmark-dark" src="../assets/naru-wordmark-dark.png" alt="Naru" width="929" height="310">
       </a>
-      <p class="overline overline-light">TESTFLIGHT BETA</p>
+      <p class="overline overline-light">TESTFLIGHT</p>
       <h2>Want to try it<br>before launch?</h2>
-      <p>You can use Naru through TestFlight before it reaches the App Store. Leave your name and email and we'll send an invitation. Every feature opens for 7 days when you first pair, and nothing is charged when the trial ends.</p>
-
-      <form class="testflight-form" id="testflight-form" novalidate>
-        <div class="testflight-fields">
-          <label class="testflight-field">
-            <span>Name <em>A pseudonym is fine</em></span>
-            <input type="text" name="name" required maxlength="40" autocomplete="nickname" placeholder="Eddie">
-          </label>
-          <label class="testflight-field">
-            <span>Email <em>Where we'll send the invitation</em></span>
-            <input type="email" name="email" required maxlength="254" autocomplete="email" inputmode="email" placeholder="eddie@example.com">
-          </label>
-        </div>
-
-        <!-- 사람에게는 보이지 않는 입력란. 값이 채워지면 봇으로 보고 저장하지 않는다. -->
-        <div class="testflight-decoy" aria-hidden="true">
-          <label for="testflight-website">Website</label>
-          <input type="text" id="testflight-website" name="website" tabindex="-1" autocomplete="off">
-        </div>
-
-        <label class="testflight-consent">
-          <input type="checkbox" name="privacyConsent" required>
-          <span>I agree to my name and email being collected and used to send the TestFlight invitation and beta updates. They are used for nothing else and handled under the <a href="./privacy.html">Privacy Policy</a>.</span>
-        </label>
-
-        <button class="release-notice-button release-notice-button-light" type="submit">Apply for the beta</button>
-        <p class="testflight-status" role="status" aria-live="polite"></p>
-        <p class="testflight-note">After applying you'll get a TestFlight invitation email from App Store Connect. You'll need the <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight</a> app on your iPhone, and iOS 17 or later.</p>
-      </form>
+      <p>While we get ready for the App Store, you can use Naru on TestFlight. Open the link on your iPhone and it installs right away. Everything unlocks for 7 days when you first connect, and nothing is charged when the trial ends.</p>
+      <a class="release-notice-button release-notice-button-light" href="https://testflight.apple.com/join/druuDewe" rel="noopener">Get Naru on TestFlight</a>
+      <p class="testflight-note">You'll need the <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight app</a> on an iPhone running iOS 17 or later. Send the same link to the person you'll use it with.</p>
     </section>
   </main>
 
