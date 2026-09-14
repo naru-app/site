@@ -1,7 +1,8 @@
 document.documentElement.classList.add("has-js");
 
 const revealItems = [
-  ...document.querySelectorAll("main > section:not(.hero):not(.screen-gallery)"),
+  // 프레스 키트는 다운로드하러 오는 페이지라 등장 애니메이션 없이 바로 보인다.
+  ...document.querySelectorAll("main > section:not(.hero):not(.screen-gallery):not(.press-intro):not(.press-section)"),
   ...document.querySelectorAll(".screen-story"),
 ];
 

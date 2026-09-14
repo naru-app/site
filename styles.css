@@ -1739,3 +1739,18 @@ a {
     transform: none;
   }
 }
+
+/* 프레스 키트. 사이트 토큰만 쓰고 새 색을 만들지 않는다. */
+.press { padding-block: 48px 96px; }
+.press-intro h1 { margin: 8px 0 20px; }
+.press-lead { max-width: 64ch; }
+.press-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px 32px; margin: 32px 0 28px; }
+.press-facts dt { font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; }
+.press-facts dd { margin: 6px 0 0; }
+.press-section { margin-top: 64px; }
+.press-section h2 { margin-bottom: 20px; }
+.press-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; align-items: start; }
+.press-grid-tall { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+.press-grid img { display: block; width: 100%; height: auto; border-radius: 16px; box-shadow: 0 8px 28px rgba(38, 34, 48, 0.12); }
+.press-grid img.on-dark { background: #262230; padding: 12%; }
+.press-grid span { display: block; margin-top: 8px; font-size: 0.9rem; opacity: 0.75; }
